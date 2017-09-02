@@ -1,0 +1,24 @@
+{
+  "name": "datelo",
+  "version": "0.0.1",
+  "description": "Plataforma para obsequiar",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabian-parra/datelo.git"
+  },
+  "author": "fabian-parra",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/fabian-parra/datelo/issues"
+  },
+  "homepage": "https://github.com/fabian-parra/datelo#readme",
+  "dependencies": {
+  }
+}
