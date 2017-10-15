@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --progress",
-    "test:unit": "NODE_PATH=./src:./test mocha test/unit --recursive --compiler js:babel-core/register"
+    "test:unit": "NODE_PATH=./src:./test mocha test/unit --recursive --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
