@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: path.resolve(__dirname, 'src', 'main.js'),
+  mode: 'development',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -38,22 +39,16 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['react', 'env'],
-            plugins: [
-              require('babel-plugin-transform-object-assign'),
-              require('babel-plugin-transform-object-rest-spread'),
-              require('babel-plugin-transform-async-to-generator'),
-              require('babel-plugin-transform-class-properties'),
-              require('babel-plugin-transform-flow-strip-types')
-            ]
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           }
         }
       }
     ]
   },
   devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    compress: true,
     hot: true,
-    inline: true,
     host: '0.0.0.0',
     port: 3000
   },
@@ -61,6 +56,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.template.html')
     }),
-    new webpack.HotModuleReplacementPlugin()
   ]
 }
